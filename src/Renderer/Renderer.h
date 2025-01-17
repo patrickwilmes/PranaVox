@@ -7,6 +7,11 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-void hello_renderer();
+namespace Graphics {
+    class Renderer {
+    public:
+        static void render();
+    };
+}
 
 #endif //RENDERER_H

@@ -32,6 +32,11 @@ bool Window::should_close() const {
     return glfwWindowShouldClose(m_window);
 }
 
+void Window::make_visible() const {
+    glViewport(0, 0, 800, 600);
+    glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
+}
+
 void Window::make_current_context() const {
     glfwMakeContextCurrent(m_window);
 }

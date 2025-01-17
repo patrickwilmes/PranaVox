@@ -7,6 +7,9 @@
 #ifndef FILEUTILS_H
 #define FILEUTILS_H
 
-void hello_file_utils();
+namespace AK::IO {
+    char *read_file_to_c_string(const char *filePath);
+}
+
 
 #endif //FILEUTILS_H

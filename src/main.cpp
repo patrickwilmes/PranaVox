@@ -5,10 +5,8 @@
 * SPDX-License-Identifier: BSD-2-Clause
 */
 #include "Renderer/Renderer.h"
-#include "Utils/FileUtils.h"
 
 int main(int argc, char **argv) {
-    hello_renderer();
-    hello_file_utils();
+    Graphics::Renderer::render();
     return 0;
 }

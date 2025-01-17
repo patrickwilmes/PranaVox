@@ -11,4 +11,4 @@ include_directories(libs/glfw-3.3.8/include)
 include_directories(libs/glad/include)
 
 add_executable(PranaVox src/main.cpp)
-target_link_libraries(PranaVox PRIVATE TriAxisLib UtilsLib glfw)
+target_link_libraries(PranaVox PRIVATE TriAxisLib AK glfw)

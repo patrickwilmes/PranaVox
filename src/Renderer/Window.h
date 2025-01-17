@@ -6,6 +6,7 @@
 */
 #ifndef WINDOW_H
 #define WINDOW_H
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 class Window final{
@@ -17,8 +18,12 @@ public:
     void make_current_context() const;
     // todo - remove this getter and make the framebuffer_size_callback happening within
     [[nodiscard]] GLFWwindow *get_window() const { return m_window; }
+    void make_visible() const;
 private:
     GLFWwindow *m_window = nullptr;
+    static void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
+        glViewport(0, 0, width, height);
+    }
 };
 
 #endif //WINDOW_H
