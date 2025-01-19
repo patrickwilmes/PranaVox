@@ -4,4 +4,4 @@ set(SOURCE_FILES
 )
 
 add_library(AK ${SOURCE_FILES})
-target_include_directories(AK PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(AK PUBLIC .)

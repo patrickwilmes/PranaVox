@@ -7,10 +7,12 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
+#include "Voxel.h"
+
 namespace Graphics {
     class Renderer {
     public:
-        static void render();
+        void clear();
     };
 }
 

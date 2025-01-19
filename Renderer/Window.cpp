@@ -7,7 +7,7 @@
 #include "Window.h"
 #include <iostream>
 
-Window::Window(const int width, const int height, const char *title) {
+Graphics::Window::Window(const int width, const int height, const char *title) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -20,23 +20,23 @@ Window::Window(const int width, const int height, const char *title) {
     }
 }
 
-Window::~Window() {
+Graphics::Window::~Window() {
     glfwTerminate();
 }
 
-void Window::swap_buffers() const {
+void Graphics::Window::swap_buffers() const {
     glfwSwapBuffers(m_window);
 }
 
-bool Window::should_close() const {
+bool Graphics::Window::should_close() const {
     return glfwWindowShouldClose(m_window);
 }
 
-void Window::make_visible() const {
+void Graphics::Window::make_visible() const {
     glViewport(0, 0, 800, 600);
     glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
 }
 
-void Window::make_current_context() const {
+void Graphics::Window::make_current_context() const {
     glfwMakeContextCurrent(m_window);
 }
